@@ -14,7 +14,7 @@ class SmsCodeResult {
   });
 
   factory SmsCodeResult.fromSms(String? sms, String matcher) {
-    String? _extractCode(String? sms) {
+    String? extractCode(String? sms) {
       if (sms == null) return null;
 
       try {
@@ -32,7 +32,7 @@ class SmsCodeResult {
     }
 
     return SmsCodeResult(
-        sms: sms, succeed: sms != null, code: _extractCode(sms));
+        sms: sms, succeed: sms != null, code: extractCode(sms));
   }
 
   @override
