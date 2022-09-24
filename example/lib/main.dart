@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pinput/pinput.dart';
 import 'package:smart_auth/smart_auth.dart';
 
 void main() {
@@ -39,7 +38,7 @@ class _MyAppState extends State<MyApp> {
     debugPrint('userConsent: ');
     final res = await smartAuth.getSmsCode(useUserConsentApi: true);
     if (res.codeFound) {
-      pinputController.setText(res.code!);
+      debugPrint(res.code!);
     } else {
       debugPrint('userConsent failed: $res');
     }
@@ -49,7 +48,7 @@ class _MyAppState extends State<MyApp> {
   void smsRetriever() async {
     final res = await smartAuth.getSmsCode();
     if (res.codeFound) {
-      pinputController.setText(res.code!);
+      debugPrint(res.code!);
     } else {
       debugPrint('smsRetriever failed: $res');
     }
@@ -111,7 +110,6 @@ class _MyAppState extends State<MyApp> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Pinput(controller: pinputController),
             TextButton(
                 onPressed: userConsent,
                 child: const Text('Sms User Consent API')),
