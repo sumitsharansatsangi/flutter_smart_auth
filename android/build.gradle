@@ -2,14 +2,22 @@ group 'fman.ge.smart_auth'
 version '1.0-SNAPSHOT'
 
 buildscript {
+<<<<<<< HEAD
     ext.kotlin_version = '2.1.0'
+=======
+    ext.kotlin_version = '1.7.10'
+>>>>>>> refs/remotes/origin/main
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
+<<<<<<< HEAD
         classpath 'com.android.tools.build:gradle:8.8.0'
+=======
+        classpath 'com.android.tools.build:gradle:7.3.0'
+>>>>>>> refs/remotes/origin/main
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -51,6 +59,7 @@ android {
 }
 
 dependencies {
+<<<<<<< HEAD
     implementation "androidx.core:core-ktx:1.15.0"
     implementation("androidx.concurrent:concurrent-futures-ktx:1.2.0")
     implementation 'com.google.android.gms:play-services-auth:21.3.0'
@@ -58,4 +67,9 @@ dependencies {
     // optional - needed for credentials support from play services, for devices running
     // Android 13 and below.
     implementation("androidx.credentials:credentials-play-services-auth:1.5.0-rc01")
+=======
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.google.android.gms:play-services-auth:20.3.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+>>>>>>> refs/remotes/origin/main
 }

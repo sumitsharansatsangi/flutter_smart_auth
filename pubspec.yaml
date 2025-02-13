@@ -16,8 +16,8 @@ funding:
   - https://ko-fi.com/flutterman
 
 environment:
-  sdk: ">=2.16.1 <4.0.0"
-  flutter: ">=2.5.0"
+  sdk: ">=2.18.1 <3.0.0"
+  flutter: ">=3.3.2"
 
 dependencies:
   flutter:
